@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        version_ubuntu: [22, 24]
+        version_ubuntu: ["22.04", "24.04"]       
         version_node: [18, 20, 22]
 
     steps:
