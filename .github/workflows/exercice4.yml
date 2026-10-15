@@ -1,0 +1,15 @@
+name: Exercice 4
+
+on:
+  workflow_dispatch:
+
+jobs:
+  afficher_readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Recuperer le depot
+        uses: actions/checkout@v4
+
+      - name: Afficher le README
+        run: cat README.md
