@@ -1,29 +1,15 @@
+name: Exercice 2
 
-name: Exercice 3
-
-on:
-  push:
-  workflow_dispatch:
+on: 
+  pull_request: 
+    paths: 
+      - '**/*.yml'
+      - '!**/test/**/*.yml'
+      - '!test/**/*.yml'
 
 jobs:
-  job1:
+  job_ex2:
     runs-on: ubuntu-latest
-    steps:
-      - run: echo "Bonjour"
 
-  job2:
-    needs: job1
-    runs-on: ubuntu-latest
     steps:
-      - run: echo "Comment"
-
-  job3:
-    needs: [job1, job2]
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "allez"
-
-  job4:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "vous ?"
+      - run: echo "Je verifie les fichier YAML"
