@@ -1,3 +1,4 @@
+
 name: Exercice 7
 
 on:
@@ -16,4 +17,4 @@ jobs:
           timezone: "Europe/Brussels"
 
       - name: Afficher la date
-        run: echo "Date actuelle : ${{ steps.current-time.outputs.formattedTime }}"
+        run: echo 'Date actuelle : ${{ steps.current-time.outputs.formattedTime }}'
