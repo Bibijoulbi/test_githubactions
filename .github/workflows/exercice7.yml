@@ -1,0 +1,19 @@
+name: Exercice 7
+
+on:
+  workflow_dispatch:
+
+jobs:
+  afficher_date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Recuperer la date actuelle
+        uses: josStorer/get-current-time@v2
+        id: current-time
+        with:
+          format: "DD/MM/YYYY HH:mm:ss"
+          timezone: "Europe/Brussels"
+
+      - name: Afficher la date
+        run: echo "Date actuelle : ${{ steps.current-time.outputs.formattedTime }}"
